@@ -101,6 +101,8 @@ clickhouse-cpp: clickhouse-cpp/clickhouse-cpp/clickhouse/libclickhouse-cpp-lib.a
 libdaemon/libdaemon/libdaemon/.libs/libdaemon.a: 
 	cd libdaemon && rm -rf libdaemon-0.14
 	cd libdaemon && tar -zxf libdaemon-0.14.tar.gz
+	cp ../../config.guess libdaemon/libdaemon/config.guess
+	cp ../../config.sub libdaemon/libdaemon/config.sub
 	cd libdaemon/libdaemon && ./configure --disable-examples
 	cd libdaemon/libdaemon && CC=${CC} CXX=${CXX} ${MAKE}
 
